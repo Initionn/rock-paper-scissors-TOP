@@ -3,11 +3,11 @@
 
 function getComputerChoice () {
     let seed = (Math.random() *100)
-    if (Math.random() * 100 <= 33.333) {
+    if (seed <= 33.333) {
         return "Rock";
-    } else if (Math.random() * 100 >=33.33 && Math.random() <= 66.666) {
+    } else if (seed >=33.33 && seed <= 66.666) {
         return "Paper";
-    } else (Math.random() * 100 >=66.666) 
+    } else (seed >=66.666) 
         return "Scissors";
 }
 
