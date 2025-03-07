@@ -35,9 +35,33 @@ function playRound(humanChoice, computerChoice) {
             break;
         case Rock, Paper:
             "Lose! Paper beats Rock!";
+            computerChoice++;
             break;
         case Rock, Scissors:
-            "Winner! Rock beats Scissors";
+            "Win! Rock beats Scissors";
+            humanChoice++
+            break;
+        case Scissors, Rock:
+            "Lose! Rock beats Scissors";
+            computerChoice++;
+            break;
+        case Scissors, Paper:
+            "Win! Scissors beats Paper!";
+            humanChoice++;
+            break;
+        case Scissors, Scissors:
+            "Tie!";
+            break;
+        case Paper, Rock:
+            "Win! Paper beats Rock!";
+            humanChoice++;
+            break;
+        case Paper, Paper:
+            "Tie!";
+            break;
+        case Paper, Scissors:
+            "Lose! Scissors beats Paper";
+            computerChoice++;
             break;
     }
 }
