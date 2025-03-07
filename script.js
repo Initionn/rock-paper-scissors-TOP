@@ -14,7 +14,7 @@ function getComputerChoice () {
 //Now we write the code that the human player has a hand in.
 
 function getHumanChoice() {
-    prompt ("What would you like to select?", "Rock, Paper, or Scissors").toLowerCase()
+    let selection = prompt ("What would you like to select?", "Rock, Paper, or Scissors").toLowerCase()
     switch (selection) {
         case "Rock":
             selection = "Rock";
