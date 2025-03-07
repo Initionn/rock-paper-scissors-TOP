@@ -14,9 +14,9 @@ function getComputerChoice () {
 
 function getHumanChoice() {
     prompt ("What would you like to select?", "Rock, Paper, or Scissors").toLowerCase()
-    if (prompt === "Rock" || "rock") {
+    if (prompt === "rock") {
         return "Rock";
-    } else if (prompt === "Paper" || "paper") {
+    } else if (prompt === "paper") {
         return "Paper";
     } else
         return "Scissors";
@@ -29,5 +29,15 @@ let computerScore = 0;
 
 //And now we write the logic to play a round.
 function playRound(humanChoice, computerChoice) {
-
+    switch(humanChoice, computerChoice) {
+        case Rock, Rock:
+            "Tie!";
+            break;
+        case Rock, Paper:
+            "Lose! Paper beats Rock!";
+            break;
+        case Rock, Scissors:
+            "Winner! Rock beats Scissors";
+            break;
+    }
 }
