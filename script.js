@@ -15,67 +15,19 @@ function getComputerChoice () {
 
 function getHumanChoice() {
     prompt ("What would you like to select?", "Rock, Paper, or Scissors").toLowerCase()
-    if (prompt === "rock") {
-        return "Rock";
-    } else if (prompt === "paper") {
-        return "Paper";
-    } else
-        return "Scissors";
-}
-/*
-//Declare score variables
-
-let humanScore = 0;
-let computerScore = 0;
-
-//And now we write the logic to play a round.
-function playRound(humanChoice, computerChoice) {
-    switch(humanChoice, computerChoice) {
-        case Rock, Rock:
-            "Tie!";
+    switch (selection) {
+        case "Rock":
+            selection = "Rock";
             break;
-        case Rock, Paper:
-            "Lose! Paper beats Rock!";
-            computerChoice++;
+        case "Paper":
+            selection = "Paper";
             break;
-        case Rock, Scissors:
-            "Win! Rock beats Scissors";
-            humanChoice++
-            break;
-        case Scissors, Rock:
-            "Lose! Rock beats Scissors";
-            computerChoice++;
-            break;
-        case Scissors, Paper:
-            "Win! Scissors beats Paper!";
-            humanChoice++;
-            break;
-        case Scissors, Scissors:
-            "Tie!";
-            break;
-        case Paper, Rock:
-            "Win! Paper beats Rock!";
-            humanChoice++;
-            break;
-        case Paper, Paper:
-            "Tie!";
-            break;
-        case Paper, Scissors:
-            "Lose! Scissors beats Paper";
-            computerChoice++;
+        case "Scissors":
+            selection = "Scissors";
             break;
     }
 }
-
-
-//call the selections from functions above
-
-const humanSelection = getHumanChoice()
-const computerSelection = getComputerChoice()
-
-playRound(humanSelection, computerSelection)
-*/
-
+//play game function time!
 function playGame () {
 
 //Declare score variables
@@ -85,37 +37,37 @@ let computerScore = 0;
 //And now we write the logic to play a round.
 function playRound(humanChoice, computerChoice) {
     switch(humanChoice, computerChoice) {
-        case Rock, Rock:
-            "Tie!";
+        case "Rock", "Rock":
+            console.log("Tie!");
             break;
-        case Rock, Paper:
-            "Lose! Paper beats Rock!";
+        case "Rock", "Paper":
+            console.log("Lose! Paper beats Rock!");
             computerChoice++;
             break;
-        case Rock, Scissors:
-            "Win! Rock beats Scissors";
+        case "Rock", "Scissors":
+            console.log("Win! Rock beats Scissors");
             humanChoice++
             break;
-        case Scissors, Rock:
-            "Lose! Rock beats Scissors";
+        case "Scissors", "Rock":
+            console.log("Lose! Rock beats Scissors");
             computerChoice++;
             break;
-        case Scissors, Paper:
-            "Win! Scissors beats Paper!";
+        case "Scissors", "Paper":
+            console.log("Win! Scissors beats Paper!");
             humanChoice++;
             break;
-        case Scissors, Scissors:
-            "Tie!";
+        case "Scissors", "Scissors":
+            console.log("Tie!");
             break;
-        case Paper, Rock:
-            "Win! Paper beats Rock!";
+        case "Paper", "Rock":
+            console.log("Win! Paper beats Rock!");
             humanChoice++;
             break;
-        case Paper, Paper:
-            "Tie!";
+        case "Paper", "Paper":
+            console.log("Tie!");
             break;
-        case Paper, Scissors:
-            "Lose! Scissors beats Paper";
+        case "Paper", "Scissors":
+            console.log("Lose! Scissors beats Paper");
             computerChoice++;
             break;
     }
