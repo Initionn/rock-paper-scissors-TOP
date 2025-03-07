@@ -2,6 +2,7 @@
 //First task is to write a function that will randomly return "Rock", "Paper", or "Scissors".
 
 function getComputerChoice () {
+    let seed = (Math.random() *100)
     if (Math.random() * 100 <= 33.333) {
         return "Rock";
     } else if (Math.random() * 100 >=33.33 && Math.random() <= 66.666) {
