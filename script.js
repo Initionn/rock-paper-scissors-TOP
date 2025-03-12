@@ -106,4 +106,3 @@ function playRound(humanChoice, computerChoice) {
         console.log("Yeah that was a tie huh?");
     }
     }
-
