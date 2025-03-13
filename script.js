@@ -1,5 +1,3 @@
-//Game will be played against the computer.
-//First task is to write a function that will randomly return "Rock", "Paper", or "Scissors".
 function getComputerChoice () {
     let seed = (Math.random() * 100);
     if (seed < 33.33) {
@@ -14,7 +12,6 @@ function getComputerChoice () {
     }
     }
 
-//Now we write the code that the human player has a hand in.
 function getHumanChoice() {
     let selection = prompt("What would you like to select?", "Rock, Paper, or Scissors");
     switch (selection.toLowerCase()) {
@@ -30,14 +27,11 @@ function getHumanChoice() {
     }
 }
 
-// here we write the play game function
 function playGame() {
 
-// declare score variables
 let humanScore = 0;
 let computerScore = 0;
 
-//And now we write the logic to play a round.
 function playRound(humanChoice, computerChoice) {
     switch (humanChoice) {
         case "Rock":
@@ -88,7 +82,6 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-// here we run a for loop to play the rounds and print the scores each time.
     for (let i = 0; i < 5; i++) {
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
@@ -97,7 +90,6 @@ function playRound(humanChoice, computerChoice) {
         console.log(" ");
     }
 
-    // and here we send a final winner message.
     if (humanScore > computerScore) {
         console.log("Congratulations! You won!");
     } else if (computerScore > humanScore) {
