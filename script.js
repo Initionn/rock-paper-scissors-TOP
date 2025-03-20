@@ -88,6 +88,8 @@ function playRound(humanChoice, computerChoice) {
     }
     }
 
+    // js introduction
+
     // main window
 const mainWindow = document.querySelector("body");
 const rpsWindow = document.createElement("div");
@@ -119,5 +121,6 @@ mainWindow.appendChild(scissorsButton);
 
 rockButton.addEventListener("click", () => {
     console.log("You chose Rock");
+    getComputerChoice();
     playRound("Rock", computerChoice);
 });
