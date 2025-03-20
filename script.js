@@ -62,16 +62,7 @@ function playRound(humanChoice, computerChoice) {
                     break;
             }
             break;
-    }
-
-    if (humanScore > computerScore) {
-        console.log("Congratulations! You won!");
-    } else if (computerScore > humanScore) {
-        console.log("Aww, the Computer won!");
-    } else {
-        console.log("Yeah that was a tie huh?");
-    }
-    }
+    }}
 
     // js introduction
 
