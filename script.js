@@ -27,8 +27,6 @@ function getHumanChoice() {
     }
 }
 
-function playGame() {
-
 let humanScore = 0;
 let computerScore = 0;
 
@@ -80,7 +78,6 @@ function playRound(humanChoice, computerChoice) {
             }
             break;
     }
-}
 
     if (humanScore > computerScore) {
         console.log("Congratulations! You won!");
@@ -109,14 +106,14 @@ mainWindow.appendChild(rockButton);
 // paper button
 const paperButton = document.createElement("button");
 paperButton.classList.add("rpsButton");
-paperButton.textContent = "Select paper";
+paperButton.textContent = "Select Paper";
 
 mainWindow.appendChild(paperButton);
 
 // scissors
 const scissorsButton = document.createElement("button");
 scissorsButton.classList.add("rpsButton");
-scissorsButton.textContent = "Select scissors";
+scissorsButton.textContent = "Select Scissors";
 
 mainWindow.appendChild(scissorsButton);
 
