@@ -12,21 +12,6 @@ function getComputerChoice () {
     }
     }
 
-function getHumanChoice() {
-    let selection = prompt("What would you like to select?", "Rock, Paper, or Scissors");
-    switch (selection.toLowerCase()) {
-        case "rock":
-            console.log("You chose Rock");
-            return "Rock";
-        case "paper":
-            console.log("You chose Paper");
-            return "Paper";
-        case "scissors":
-            console.log("You chose Scissors");
-            return "Scissors";
-    }
-}
-
 let humanScore = 0;
 let computerScore = 0;
 
