@@ -119,8 +119,23 @@ scissorsButton.textContent = "Select Scissors";
 
 mainWindow.appendChild(scissorsButton);
 
+const scoreAnnounce = document.createElement("h2");
+scoreAnnounce.textContent = `The current score is ${humanScore} for the Human, and ${computerScore} for the computer!`;
+mainWindow.appendChild(scoreAnnounce);
+
+// rock listener
 rockButton.addEventListener("click", () => {
     console.log("You chose Rock");
     computerChoice = getComputerChoice();
     playRound("Rock", computerChoice);
+
 });
+
+
+
+
+// 1. For now, remove the logic that plays exactly five rounds.
+// 2. Create three buttons, one for each selection. Add an event listener to the buttons that call your playRound function with the correct 
+//    playerSelection every time a button is clicked. 
+// 3. Add a div for displaying results and change all of your console.logs into DOM methods.
+// 4. Display the running score, and announce a winner of the game once one player reaches 5 points.
