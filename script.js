@@ -121,6 +121,6 @@ mainWindow.appendChild(scissorsButton);
 
 rockButton.addEventListener("click", () => {
     console.log("You chose Rock");
-    getComputerChoice();
+    computerChoice = getComputerChoice();
     playRound("Rock", computerChoice);
 });
