@@ -91,9 +91,36 @@ function playRound(humanChoice, computerChoice) {
     }
     }
 
+    // main window
 const mainWindow = document.querySelector("body");
 const rpsWindow = document.createElement("div");
 rpsWindow.classList.add("mainWindow");
 rpsWindow.textContent = "Welcome to Rock Paper Scissors!";
 
 mainWindow.appendChild(rpsWindow);
+
+// rock button
+const rockButton = document.createElement("button");
+rockButton.classList.add("rpsButton");
+rockButton.textContent = "Select Rock";
+
+mainWindow.appendChild(rockButton);
+
+// paper button
+const paperButton = document.createElement("button");
+paperButton.classList.add("rpsButton");
+paperButton.textContent = "Select paper";
+
+mainWindow.appendChild(paperButton);
+
+// scissors
+const scissorsButton = document.createElement("button");
+scissorsButton.classList.add("rpsButton");
+scissorsButton.textContent = "Select scissors";
+
+mainWindow.appendChild(scissorsButton);
+
+rockButton.addEventListener("click", () => {
+    console.log("You chose Rock");
+    playRound("Rock", computerChoice);
+});
