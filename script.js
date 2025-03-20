@@ -90,3 +90,10 @@ function playRound(humanChoice, computerChoice) {
         console.log("Yeah that was a tie huh?");
     }
     }
+
+const mainWindow = document.querySelector("body");
+const rpsWindow = document.createElement("div");
+rpsWindow.classList.add("mainWindow");
+rpsWindow.textContent = "Welcome to Rock Paper Scissors!";
+
+mainWindow.appendChild(rpsWindow);
