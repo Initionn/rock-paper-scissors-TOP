@@ -82,14 +82,6 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-    for (let i = 0; i < 5; i++) {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-        console.log("The current score is: "+ humanScore + " for the Human, and " + computerScore + " for the computer!");
-        console.log(" ");
-    }
-
     if (humanScore > computerScore) {
         console.log("Congratulations! You won!");
     } else if (computerScore > humanScore) {
