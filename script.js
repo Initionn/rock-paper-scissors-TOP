@@ -104,7 +104,7 @@ rockButton.addEventListener("click", () => {
     console.log("You chose Rock");
     computerChoice = getComputerChoice();
     playRound("Rock", computerChoice);
-
+    scoreAnnounce.textContent = `The current score is ${humanScore} for the Human, and ${computerScore} for the computer!`;
 });
 
 
