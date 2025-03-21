@@ -129,12 +129,9 @@ scissorsButton.addEventListener("click", () => {
     playRound("Scissors", computerChoice);
     scoreAnnounce.textContent = `The current score is ${humanScore} for the Human, and ${computerScore} for the computer!`;
 });
-asdf
-asdfasdf
-asdfasdfasdf
 
-if (humanScore < 5 || computerScore < 5) {
-    winnerAnnounce.text
+while (humanScore < 5 || computerScore < 5) {
+
 }
 
 // 1. For now, remove the logic that plays exactly five rounds.
