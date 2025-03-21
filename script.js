@@ -20,14 +20,14 @@ function playRound(humanChoice, computerChoice) {
         case "Rock":
             switch (computerChoice) {
                 case "Rock":
-                    console.log("Tie!");
+                    roundAnnounce.textContent = `You chose ${humanChoice}, the computer chose ${computerChoice}, it's a Tie!` 
                     break;
                 case "Paper":
-                    console.log("You lose! Paper beats Rock!");
+                    roundAnnounce.textContent = `You chose ${humanChoice}, the computer chose ${computerChoice}, you lost this round!` 
                     computerScore++;
                     break;
                 case "Scissors":
-                    console.log("You win! Rock beats Scissors!");
+                    roundAnnounce.textContent = `You chose ${humanChoice}, the computer chose ${computerChoice}, you win this round!` 
                     humanScore++;
                     break;
             }
@@ -35,14 +35,14 @@ function playRound(humanChoice, computerChoice) {
         case "Paper":
             switch (computerChoice) {
                 case "Rock":
-                    console.log("You win! Paper beats Rock!");
+                    roundAnnounce.textContent = `You chose ${humanChoice}, the computer chose ${computerChoice}, you win this round!` 
                     humanScore++;
                     break;
                 case "Paper":
-                    console.log("Tie!");
+                    roundAnnounce.textContent = `You chose ${humanChoice}, the computer chose ${computerChoice}, it's a Tie!` 
                     break;
                 case "Scissors":
-                    console.log("You lose! Scissors beats Paper");
+                    roundAnnounce.textContent = `You chose ${humanChoice}, the computer chose ${computerChoice}, you lost this round!` 
                     computerScore++;
                     break;
             }
@@ -50,15 +50,15 @@ function playRound(humanChoice, computerChoice) {
         case "Scissors":
             switch (computerChoice) {
                 case "Rock":
-                    console.log("You lose! Rock beats Scissors!");
+                    roundAnnounce.textContent = `You chose ${humanChoice}, the computer chose ${computerChoice}, you lost this round!` 
                     computerScore++;
                     break;
                 case "Paper":
-                    console.log("You win! Scissors beats Paper!");
+                    roundAnnounce.textContent = `You chose ${humanChoice}, the computer chose ${computerChoice}, you win this round!` 
                     humanScore++;
                     break;
                 case "Scissors":
-                    console.log("Tie!");
+                    roundAnnounce.textContent = `You chose ${humanChoice}, the computer chose ${computerChoice}, it's a Tie!` 
                     break;
             }
             break;
@@ -95,9 +95,18 @@ scissorsButton.textContent = "Select Scissors";
 
 mainWindow.appendChild(scissorsButton);
 
+// round results announce
+const roundAnnounce = document.createElement("h3");
+mainWindow.appendChild(roundAnnounce);
+
+// score results announce
 const scoreAnnounce = document.createElement("h2");
 scoreAnnounce.textContent = `The current score is ${humanScore} for the Human, and ${computerScore} for the computer!`;
 mainWindow.appendChild(scoreAnnounce);
+
+const winnerAnnounce = document.createElement("h1");
+winnerAnnounce.textContent = "";
+mainWindow.appendChild(winnerAnnounce);
 
 // rock listener
 rockButton.addEventListener("click", () => {
@@ -107,11 +116,26 @@ rockButton.addEventListener("click", () => {
     scoreAnnounce.textContent = `The current score is ${humanScore} for the Human, and ${computerScore} for the computer!`;
 });
 
+paperButton.addEventListener("click", () => {
+    console.log("You chose Paper");
+    computerChoice = getComputerChoice();
+    playRound("Paper", computerChoice);
+    scoreAnnounce.textContent = `The current score is ${humanScore} for the Human, and ${computerScore} for the computer!`;
+});
 
+scissorsButton.addEventListener("click", () => {
+    console.log("You chose Scissors");
+    computerChoice = getComputerChoice();
+    playRound("Scissors", computerChoice);
+    scoreAnnounce.textContent = `The current score is ${humanScore} for the Human, and ${computerScore} for the computer!`;
+});
 
+while (humanScore < 5 || computerScore < 5) {
+
+}
 
 // 1. For now, remove the logic that plays exactly five rounds.
 // 2. Create three buttons, one for each selection. Add an event listener to the buttons that call your playRound function with the correct 
 //    playerSelection every time a button is clicked. 
 // 3. Add a div for displaying results and change all of your console.logs into DOM methods.
-// 4. Display the running score, and announce a winner of the game once one player reaches 5 points.
+// 4. Display the running score, and announce a winner of the game once one player reaches 5 points
