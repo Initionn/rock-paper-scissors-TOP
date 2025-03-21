@@ -118,7 +118,7 @@ rockButton.addEventListener("click", () => {
         winnerAnnounce.textContent = "You won this game! Keep playing until you get another 5!"
     } else if (computerScore == 5) {
         winnerAnnounce.textContent = "The computer took this game! Keep playing and you'll get 'em back!"
-    }   winnerAnnounce.textContent = "No winner of this game yet!"
+    }   else winnerAnnounce.textContent = "No winner of this game yet!"
 });
 
 paperButton.addEventListener("click", () => {
@@ -130,7 +130,7 @@ paperButton.addEventListener("click", () => {
         winnerAnnounce.textContent = "You won this game! Keep playing until you get another 5!"
     } else if (computerScore == 5) {
         winnerAnnounce.textContent = "The computer took this game! Keep playing and you'll get 'em back!"
-    }   winnerAnnounce.textContent = "No winner of this game yet!"
+    }   else innerAnnounce.textContent = "No winner of this game yet!"
 });
 
 scissorsButton.addEventListener("click", () => {
@@ -142,7 +142,7 @@ scissorsButton.addEventListener("click", () => {
         winnerAnnounce.textContent = "You won this game! Keep playing until you get another 5!"
     } else if (computerScore == 5) {
         winnerAnnounce.textContent = "The computer took this game! Keep playing and you'll get 'em back!"
-    }   winnerAnnounce.textContent = "No winner of this game yet!"
+    }   else winnerAnnounce.textContent = "No winner of this game yet!"
 });
 
 
