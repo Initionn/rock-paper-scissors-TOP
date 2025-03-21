@@ -114,6 +114,11 @@ rockButton.addEventListener("click", () => {
     computerChoice = getComputerChoice();
     playRound("Rock", computerChoice);
     scoreAnnounce.textContent = `The current score is ${humanScore} for the Human, and ${computerScore} for the computer!`;
+    if (humanScore == 5) {
+        winnerAnnounce.textContent = "You won this game! Keep playing until you get another 5!"
+    } else if (computerScore == 5) {
+        winnerAnnounce.textContent = "The computer took this game! Keep playing and you'll get 'em back!"
+    }   winnerAnnounce.textContent = "No winner of this game yet!"
 });
 
 paperButton.addEventListener("click", () => {
@@ -121,6 +126,11 @@ paperButton.addEventListener("click", () => {
     computerChoice = getComputerChoice();
     playRound("Paper", computerChoice);
     scoreAnnounce.textContent = `The current score is ${humanScore} for the Human, and ${computerScore} for the computer!`;
+    if (humanScore == 5) {
+        winnerAnnounce.textContent = "You won this game! Keep playing until you get another 5!"
+    } else if (computerScore == 5) {
+        winnerAnnounce.textContent = "The computer took this game! Keep playing and you'll get 'em back!"
+    }   winnerAnnounce.textContent = "No winner of this game yet!"
 });
 
 scissorsButton.addEventListener("click", () => {
@@ -128,13 +138,13 @@ scissorsButton.addEventListener("click", () => {
     computerChoice = getComputerChoice();
     playRound("Scissors", computerChoice);
     scoreAnnounce.textContent = `The current score is ${humanScore} for the Human, and ${computerScore} for the computer!`;
+    if (humanScore == 5) {
+        winnerAnnounce.textContent = "You won this game! Keep playing until you get another 5!"
+    } else if (computerScore == 5) {
+        winnerAnnounce.textContent = "The computer took this game! Keep playing and you'll get 'em back!"
+    }   winnerAnnounce.textContent = "No winner of this game yet!"
 });
 
-if (humanScore % 5 == 0) {
-    winnerAnnounce.textContent = "You won this game! Keep playing until you get another 5!"
-} else if (computerScore % 5 == 0) {
-    winnerAnnounce.textContent = "The computer took this game! Keep playing and you'll get 'em back!"
-}   winnerAnnounce.textContent = "No winner of this game yet!"
 
 // 1. For now, remove the logic that plays exactly five rounds.
 // 2. Create three buttons, one for each selection. Add an event listener to the buttons that call your playRound function with the correct 
